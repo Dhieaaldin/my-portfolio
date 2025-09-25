@@ -409,6 +409,15 @@ section {
     transition: transform 0.3s ease;
 }
 
+/* Special styling for interface images to show full content */
+.project-image img[alt*="Interface"], 
+.project-image img[alt*="interface"],
+.project-image img[src*="interface"] {
+    object-fit: contain;
+    background-color: #f8f9fa;
+    padding: 8px;
+}
+
 .project-item:hover .project-image img {
     transform: scale(1.1);
 }
