@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 9 - Hybrid Recommendation System for Insurance Product Optimization</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../about.html">About Me</a></li>
+                <li><a href="../../projects.html">Projects</a></li>
+                <li><a href="../../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="project">
+        <h1>Project 9: Hybrid Recommendation System for Insurance Product Optimization</h1>
+        <p>A sophisticated hybrid recommendation system that combines rule-based matching with XGBoost machine learning to optimize insurance product recommendations for clients. The system analyzes client demographics, contract history, claims data, and behavioral patterns to provide personalized product suggestions that maximize both client satisfaction and business value.</p>
+        
+        <h2>Objectives</h2>
+        <ul>
+            <li>Develop a hybrid recommendation system combining rule-based and ML approaches</li>
+            <li>Analyze client profiles and insurance behavior patterns</li>
+            <li>Implement XGBoost for predictive modeling</li>
+            <li>Create personalized product recommendations</li>
+            <li>Optimize insurance product cross-selling and upselling</li>
+        </ul>
+        
+        <h2>Tools Used</h2>
+        <ul>
+            <li>Python</li>
+            <li>Pandas & NumPy</li>
+            <li>XGBoost</li>
+            <li>Scikit-learn</li>
+            <li>Plotly</li>
+            <li>Optuna (Hyperparameter Optimization)</li>
+            <li>Jupyter Notebook</li>
+        </ul>
+
+        <h2>Key Features</h2>
+        <ul>
+            <li><strong>Data Integration:</strong> Merged client demographics, contract data, claims history, and product mappings</li>
+            <li><strong>Client Profiling:</strong> Created comprehensive client profiles with behavioral features</li>
+            <li><strong>Rule-Based Matching:</strong> Implemented demographic and profile-based product matching</li>
+            <li><strong>Machine Learning Layer:</strong> XGBoost model with GPU acceleration for prediction</li>
+            <li><strong>Hybrid Scoring:</strong> Combined ML predictions with rule-based flags for final recommendations</li>
+            <li><strong>Hyperparameter Optimization:</strong> Used Optuna for model tuning</li>
+        </ul>
+
+        <h2>Results</h2>
+        <img src="images/Capture d'écran 2025-09-25 215913.png" class="img2" alt="Client Type Distribution">
+        <img src="images/Capture d'écran 2025-09-25 215930.png" class="img2" alt="Sector Analysis">
+        <img src="images/Capture d'écran 2025-09-25 215943.png" class="img2" alt="Profession Distribution">
+        <img src="images/Capture d'écran 2025-09-25 215956.png" class="img2" alt="Geographic Distribution">
+        <img src="images/Capture d'écran 2025-09-25 220011.png" class="img2" alt="Age Distribution Analysis">
+        <img src="images/Capture d'écran 2025-09-25 220028.png" class="img2" alt="Family Situation Analysis">
+        <img src="images/interface.png" class="img2" alt="System Interface">
+
+        <h2>Technical Implementation</h2>
+        <h3>Data Processing Pipeline</h3>
+        <ul>
+            <li>Cleaned and standardized 44,061 client records</li>
+            <li>Processed 92,981 insurance contracts</li>
+            <li>Analyzed 11,150 claims records</li>
+            <li>Created client-product pairs for recommendation modeling</li>
+        </ul>
+
+        <h3>Feature Engineering</h3>
+        <ul>
+            <li>Client demographics (age, gender, profession, sector)</li>
+            <li>Contract behavior (count, status, premiums paid)</li>
+            <li>Claims history and frequency</li>
+            <li>Profile matching scores</li>
+            <li>Geographic and temporal features</li>
+        </ul>
+
+        <h3>Model Performance</h3>
+        <ul>
+            <li>Achieved ROC-AUC of 0.8367 on test data</li>
+            <li>Optimized hyperparameters using Optuna</li>
+            <li>GPU-accelerated training with XGBoost</li>
+            <li>Hybrid scoring combining ML predictions with business rules</li>
+        </ul>
+
+        <h2>Business Impact</h2>
+        <ul>
+            <li>Personalized product recommendations for 44,000+ clients</li>
+            <li>Improved cross-selling and upselling opportunities</li>
+            <li>Data-driven approach to insurance product optimization</li>
+            <li>Scalable recommendation system for large client bases</li>
+        </ul>
+
+        <h2>Code & Documentation</h2>
+        <a href="Untitled.ipynb" download class="button">Download Notebook</a>
+        <a href="a hybtid driven reccomendation system for insurance product optimization.pdf" download class="button">Download Report</a>
+        <a href="https://github.com/Dhieaaldin/insurance-recommendation-system" target="_blank" class="button">View on GitHub</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Dhia Eddine Louati</p>
+    </footer>
+</body>
+</html>

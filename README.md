@@ -1,56 +1,92 @@
-# Dhia Eddine Louati - Data Science & AI Portfolio
+# Dhia Eddine Louati - Portfolio Website
 
-Welcome to the personal portfolio website of **Dhia Eddine Louati**, a Data Science & AI Enthusiast. This website showcases my projects, skills, and professional background in the field of data analysis, machine learning, and artificial intelligence.
+A modern, high-performance portfolio website built with **Next.js 15 (App Router)**, **TypeScript**, **Tailwind CSS v4**, and **Framer Motion**. Designed for static export to GitHub Pages.
 
-## 🚀 About the Project
+## 🚀 Features
 
-This portfolio is designed to be a comprehensive showcase of my work. It features a modern, responsive design using glassmorphism effects and smooth transitions to provide an engaging user experience.
+- **Modern Tech Stack**: Built with the latest Next.js and Tailwind CSS features.
+- **Fully Static**: Exported as static HTML/CSS/JS for zero-cost hosting (GitHub Pages, Vercel, Netlify).
+- **Responsive Design**: Mobile-first architecture ensuring perfect display on all devices.
+- **Dark Mode**: Seamless theme switching with system preference detection.
+- **Animations**: Smooth scroll revelations and interactions using Framer Motion.
+- **SEO Friendly**: Pre-configured metadata and semantic HTML structure.
+- **Project Filtering**: Categorized project showcase with instant filtering.
 
-### Key Features
+## 🛠️ Tech Stack
 
-*   **Responsive Design:** Fully optimized for desktop, tablet, and mobile devices.
-*   **Project Showcase:** detailed views of various projects with filtering capabilities (Machine Learning, Data Analysis, Software Development).
-*   **Skills Section:** Visual representation of technical skills including proficiency levels in Python, SQL, Machine Learning, and more.
-*   **Interactive UI:** Smooth animations and intuitive navigation.
-*   **Contact Information:** Easy access to social profiles (LinkedIn, GitHub) and contact details.
-
-## 🛠️ Technology Stack
-
-This project is built using standard web technologies:
-
-*   **HTML5:** Semantic markup for structure.
-*   **CSS3:** Styling, animations, and responsive layout (Flexbox/Grid). It uses a custom `style.css` for consistent theming.
-*   **JavaScript:** Vanilla JavaScript (`script.js`) for interactive elements like project filtering and animations.
-*   **External Libraries:**
-    *   [Font Awesome](https://fontawesome.com/) for icons.
-    *   [Google Fonts](https://fonts.google.com/) for typography (Inter font family).
-    *   [Lottie](https://airbnb.io/lottie/) for animations.
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **UI Components**: [Shadcn UI](https://ui.shadcn.com/) (adapted)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
 
 ## 📂 Project Structure
 
-```text
-my portfolio/
-├── css/
-│   └── style.css       # Main stylesheet
-├── js/
-│   └── script.js       # Main JavaScript file
-├── projects/           # Directory containing detailed project pages and assets
-├── index.html          # specific Landing page
-├── about.html          # detailed "About Me" page
-├── projects.html       # Portfolio projects gallery
-├── skills.html         # Technical skills overview
-├── contact.html        # Contact information page
-└── README.md           # Project documentation
+```bash
+├── public/              # Static assets (images, favicon)
+├── src/
+│   ├── app/             # Next.js App Router pages and layout
+│   │   ├── globals.css  # Global styles & Tailwind v4 config
+│   │   ├── layout.tsx   # Root layout with ThemeProvider
+│   │   └── page.tsx     # Main one-page portfolio
+│   ├── components/
+│   │   ├── layout/      # Navbar, Footer
+│   │   ├── sections/    # Page sections (Hero, About, etc.)
+│   │   └── ui/          # Reusable UI atoms (Button, Card, etc.)
+│   ├── data/            # Static data files (projects.ts)
+│   └── lib/             # Utilities (cn, etc.)
+└── next.config.ts       # Next.js configuration (static export)
 ```
 
+## ⚡ Getting Started
 
-## 👤 Author
+### Prerequisites
 
-**Dhia Eddine Louati**
+- Node.js 18.17 or later
 
-*   **Role:** Data Science & AI Enthusiast
-*   **Focus:** Data Analysis, Machine Learning, AI Solutions, Web Development
-*   **GitHub:** [Dhieaaldin](https://github.com/Dhieaaldin)
+### Installation
 
----
-&copy; 2024 Dhia Eddine Louati. All rights reserved.
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/Dhieaaldin/my-portfolio.git
+    cd my-portfolio
+    ```
+
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+
+3.  **Run development server**:
+    ```bash
+    npm run dev
+    ```
+    Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## 📦 Deployment
+
+### GitHub Pages
+
+This project is configured for static export (`output: 'export'` in `next.config.ts`).
+
+1.  **Build the project**:
+    ```bash
+    npm run build
+    ```
+    This generates an `out/` directory with the static files.
+
+2.  **Deploy**:
+    - Push the contents of the `out/` folder to your `gh-pages` branch, or configure GitHub Actions to build and deploy this repo.
+
+    **Note**: If deploying to a subdirectory (e.g., `username.github.io/repo-name`), you may need to configure `basePath` in `next.config.ts`.
+
+## 🎨 Customization
+
+- **Projects**: Edit `src/data/projects.ts` to add or update your projects.
+- **Skills**: Update the list in `src/components/sections/skills.tsx`.
+- **Theme**: Modify CSS variables in `src/app/globals.css`.
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
