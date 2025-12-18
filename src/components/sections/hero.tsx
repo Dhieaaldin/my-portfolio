@@ -25,6 +25,14 @@ export function Hero() {
                     Embark on a data science journey where numbers tell stories and insights spark innovation.
                     Solving real-world challenges through creative data analysis.
                 </p>
+                <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.8 }}
+                    className="text-sm font-medium text-primary/80 italic mt-2"
+                >
+                    &ldquo;Ask my AI assistant about my projects, skills, or experience.&rdquo;
+                </motion.p>
             </motion.div>
 
             <motion.div
