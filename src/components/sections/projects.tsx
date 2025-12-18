@@ -60,16 +60,20 @@ export function Projects() {
                         >
                             <Card className="h-full flex flex-col overflow-hidden hover:shadow-lg transition-shadow duration-300">
                                 <div className="relative aspect-video w-full overflow-hidden bg-muted">
-                                    <Image
-                                        src={project.image}
-                                        alt={project.title}
-                                        fill
-                                        className="object-cover transition-transform duration-300 hover:scale-105"
-                                    // Use unoptimized for legacy images if needed, but next.config.ts handles global unoptimized
-                                    />
+                                    <Link href={`/projects/${project.id}`}>
+                                        <Image
+                                            src={project.image}
+                                            alt={project.title}
+                                            fill
+                                            className="object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                                        // Use unoptimized for legacy images if needed, but next.config.ts handles global unoptimized
+                                        />
+                                    </Link>
                                 </div>
                                 <CardHeader>
-                                    <CardTitle className="line-clamp-1">{project.title}</CardTitle>
+                                    <Link href={`/projects/${project.id}`}>
+                                        <CardTitle className="line-clamp-1 hover:text-primary transition-colors cursor-pointer">{project.title}</CardTitle>
+                                    </Link>
                                     <CardDescription className="line-clamp-2 min-h-[2.5rem]">{project.description}</CardDescription>
                                 </CardHeader>
                                 <CardContent className="flex-1 flex flex-col justify-end">

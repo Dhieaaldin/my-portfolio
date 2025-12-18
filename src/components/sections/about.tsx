@@ -25,7 +25,7 @@ export function About() {
                     className="relative aspect-square max-w-md mx-auto lg:mx-0 overflow-hidden rounded-2xl border-2 border-border/50 shadow-xl"
                 >
                     <Image
-                        src="/me_ai_generated.png"
+                        src="/my-portfolio/me_ai_generated.png"
                         alt="Dhia Eddine Louati"
                         fill
                         className="object-cover"
