@@ -26,7 +26,7 @@ export const projectsData: Project[] = [
             "/my-portfolio/projects/project7/images/Capture d'écran 2025-06-15 124027.png",
             "/my-portfolio/projects/project7/images/Capture d'écran 2025-06-15 124053.png",
         ],
-        github: "https://github.com/Dhieaaldin/sonicshield",
+        github: "https://github.com/Dhieaaldin/my-portfolio/tree/main/projects/project7",
     },
     {
         id: "car-price",
@@ -43,7 +43,7 @@ export const projectsData: Project[] = [
             "/my-portfolio/projects/project6/images/newplot (4).png",
             "/my-portfolio/projects/project6/images/newplot.png",
         ],
-        github: "https://github.com/Dhieaaldin/car-price-predictor",
+        github: "https://github.com/Dhieaaldin/my-portfolio/tree/main/projects/project6",
     },
     {
         id: "insurance-rec",
@@ -61,7 +61,7 @@ export const projectsData: Project[] = [
             "/my-portfolio/projects/project9/images/Capture d'écran 2025-09-25 220011.png",
             "/my-portfolio/projects/project9/images/Capture d'écran 2025-09-25 220028.png",
         ],
-        github: "https://github.com/Dhieaaldin/insurance-recommendation-system",
+        github: "https://github.com/Dhieaaldin/my-portfolio/tree/main/projects/project9",
     },
     {
         id: "git-visualizer",
@@ -91,7 +91,7 @@ export const projectsData: Project[] = [
             "/my-portfolio/projects/project1/images/plot3.png",
             "/my-portfolio/projects/project1/images/plot4.png",
         ],
-        github: "https://github.com/Dhieaaldin/google-analytics-analysis",
+        github: "https://github.com/Dhieaaldin/my-portfolio/tree/main/projects/project1",
     },
     {
         id: "world-layoffs",
@@ -105,7 +105,7 @@ export const projectsData: Project[] = [
             "/my-portfolio/projects/project4/images/plot2.png",
             "/my-portfolio/projects/project4/images/plot3.png",
         ],
-        github: "https://github.com/Dhieaaldin/world-layoffs-analysis",
+        github: "https://github.com/Dhieaaldin/my-portfolio/tree/main/projects/project4",
     },
     {
         id: "nyc-sat",
@@ -118,7 +118,7 @@ export const projectsData: Project[] = [
             "/my-portfolio/projects/project5/images/plot1.png",
             "/my-portfolio/projects/project5/images/plot2.png",
         ],
-        github: "https://github.com/Dhieaaldin/nyc-school-analysis",
+        github: "https://github.com/Dhieaaldin/my-portfolio/tree/main/projects/project5",
     },
     {
         id: "euro-2024",
@@ -132,7 +132,7 @@ export const projectsData: Project[] = [
             "/my-portfolio/projects/project2/images/plot2.png",
             "/my-portfolio/projects/project2/images/plot3.png",
         ],
-        github: "https://github.com/Dhieaaldin/euro2024-analysis",
+        github: "https://github.com/Dhieaaldin/my-portfolio/tree/main/projects/project2",
     },
     {
         id: "netflix",
@@ -144,6 +144,6 @@ export const projectsData: Project[] = [
         screenshots: [
             "/my-portfolio/projects/project3/images/plot1.png",
         ],
-        github: "https://github.com/Dhieaaldin/netflix-analysis",
+        github: "https://github.com/Dhieaaldin/my-portfolio/tree/main/projects/project3",
     },
 ]
