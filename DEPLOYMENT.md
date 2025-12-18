@@ -11,12 +11,12 @@ This project is configured to automatically deploy to GitHub Pages using GitHub 
 
 ## 2. Push Your Changes
 
-Once you push your changes to the `main` branch, the deployment process will start automatically.
+Once you push your changes to the `portfolio-v2` branch, the deployment process will start automatically.
 
 ```bash
 git add .
 git commit -m "Configure GitHub Pages deployment"
-git push origin main
+git push origin portfolio-v2
 ```
 
 ## 3. Monitor Deployment
