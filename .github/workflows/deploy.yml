@@ -57,12 +57,6 @@ jobs:
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        with:
-          # Automatically inject basePath in your Next.js config file and disable
-          # server side image optimization (WebP) to support Static Site Export.
-          #
-          # You can list more options here if necessary
-          static_site_generator: next
       - name: Restore cache
         uses: actions/cache@v4
         with:
@@ -76,9 +70,13 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        run: npm run build
       - name: Debug Output Structure
-        run: ls -R
+        run: |
+          echo "Listing current directory:"
+          ls -la
+          if [ -d "out" ]; then echo "'out' directory exists!"; ls -la out; else echo "'out' directory NOT found"; fi
+          if [ -d ".next" ]; then echo "'.next' directory exists!"; ls -la .next; fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
