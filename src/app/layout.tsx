@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
-import { FloatingChatbot } from "@/components/layout/floating-chatbot";
+import { PersistentChat } from "@/components/layout/persistent-chat";
 import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -32,7 +32,7 @@ export default function RootLayout({
             <Navbar />
             <main className="flex-1">{children}</main>
             <Footer />
-            <FloatingChatbot />
+            <PersistentChat />
           </div>
         </ThemeProvider>
       </body>

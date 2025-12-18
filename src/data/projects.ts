@@ -7,6 +7,7 @@ export interface Project {
     tags: string[]
     category: ProjectCategory
     image: string
+    screenshots: string[]
     github: string
     link?: string
 }
@@ -19,6 +20,12 @@ export const projectsData: Project[] = [
         tags: ["Machine Learning", "Android", "TensorFlow", "Flask"],
         category: "Machine Learning",
         image: "/my-portfolio/projects/project7/images/thumbnail.png",
+        screenshots: [
+            "/my-portfolio/projects/project7/images/thumbnail.png",
+            "/my-portfolio/projects/project7/images/Capture d'écran 2025-06-11 024110.png",
+            "/my-portfolio/projects/project7/images/Capture d'écran 2025-06-15 124027.png",
+            "/my-portfolio/projects/project7/images/Capture d'écran 2025-06-15 124053.png",
+        ],
         github: "https://github.com/Dhieaaldin/sonicshield",
     },
     {
@@ -28,6 +35,14 @@ export const projectsData: Project[] = [
         tags: ["Machine Learning", "Web Development", "Data Visualization"],
         category: "Machine Learning",
         image: "/my-portfolio/projects/project6/images/thumbnail.png",
+        screenshots: [
+            "/my-portfolio/projects/project6/images/thumbnail.png",
+            "/my-portfolio/projects/project6/images/newplot (1).png",
+            "/my-portfolio/projects/project6/images/newplot (2).png",
+            "/my-portfolio/projects/project6/images/newplot (3).png",
+            "/my-portfolio/projects/project6/images/newplot (4).png",
+            "/my-portfolio/projects/project6/images/newplot.png",
+        ],
         github: "https://github.com/Dhieaaldin/car-price-predictor",
     },
     {
@@ -37,6 +52,15 @@ export const projectsData: Project[] = [
         tags: ["Machine Learning", "XGBoost", "Recommendation System"],
         category: "Machine Learning",
         image: "/my-portfolio/projects/project9/images/interface.png",
+        screenshots: [
+            "/my-portfolio/projects/project9/images/interface.png",
+            "/my-portfolio/projects/project9/images/Capture d'écran 2025-09-25 215913.png",
+            "/my-portfolio/projects/project9/images/Capture d'écran 2025-09-25 215930.png",
+            "/my-portfolio/projects/project9/images/Capture d'écran 2025-09-25 215943.png",
+            "/my-portfolio/projects/project9/images/Capture d'écran 2025-09-25 215956.png",
+            "/my-portfolio/projects/project9/images/Capture d'écran 2025-09-25 220011.png",
+            "/my-portfolio/projects/project9/images/Capture d'écran 2025-09-25 220028.png",
+        ],
         github: "https://github.com/Dhieaaldin/insurance-recommendation-system",
     },
     {
@@ -46,6 +70,12 @@ export const projectsData: Project[] = [
         tags: ["Java", "Swing", "JGit", "MySQL"],
         category: "Software Development",
         image: "/my-portfolio/projects/project8/images/thumbnail.png",
+        screenshots: [
+            "/my-portfolio/projects/project8/images/thumbnail.png",
+            "/my-portfolio/projects/project8/images/login.png",
+            "/my-portfolio/projects/project8/images/commit-graph.png",
+            "/my-portfolio/projects/project8/images/notes-panel.png",
+        ],
         github: "https://github.com/Dhieaaldin/Git_visualizer",
     },
     {
@@ -55,6 +85,12 @@ export const projectsData: Project[] = [
         tags: ["Python", "Data Analysis", "Google Analytics"],
         category: "Data Analysis",
         image: "/my-portfolio/projects/project1/images/plot2.png",
+        screenshots: [
+            "/my-portfolio/projects/project1/images/plot1.png",
+            "/my-portfolio/projects/project1/images/plot2.png",
+            "/my-portfolio/projects/project1/images/plot3.png",
+            "/my-portfolio/projects/project1/images/plot4.png",
+        ],
         github: "https://github.com/Dhieaaldin/google-analytics-analysis",
     },
     {
@@ -64,6 +100,11 @@ export const projectsData: Project[] = [
         tags: ["MySQL", "Data Cleaning", "EDA"],
         category: "Data Analysis",
         image: "/my-portfolio/projects/project4/images/plot1.png",
+        screenshots: [
+            "/my-portfolio/projects/project4/images/plot1.png",
+            "/my-portfolio/projects/project4/images/plot2.png",
+            "/my-portfolio/projects/project4/images/plot3.png",
+        ],
         github: "https://github.com/Dhieaaldin/world-layoffs-analysis",
     },
     {
@@ -73,6 +114,10 @@ export const projectsData: Project[] = [
         tags: ["Data Analysis", "Education", "Statistics"],
         category: "Data Analysis",
         image: "/my-portfolio/projects/project5/images/plot2.png",
+        screenshots: [
+            "/my-portfolio/projects/project5/images/plot1.png",
+            "/my-portfolio/projects/project5/images/plot2.png",
+        ],
         github: "https://github.com/Dhieaaldin/nyc-school-analysis",
     },
     {
@@ -82,6 +127,11 @@ export const projectsData: Project[] = [
         tags: ["SQL", "Sports Analytics", "Data Visualization"],
         category: "SQL & Database",
         image: "/my-portfolio/projects/project2/images/plot2.png",
+        screenshots: [
+            "/my-portfolio/projects/project2/images/plot1.png",
+            "/my-portfolio/projects/project2/images/plot2.png",
+            "/my-portfolio/projects/project2/images/plot3.png",
+        ],
         github: "https://github.com/Dhieaaldin/euro2024-analysis",
     },
     {
@@ -91,6 +141,9 @@ export const projectsData: Project[] = [
         tags: ["Data Analysis", "Entertainment", "Trends"],
         category: "Data Analysis",
         image: "/my-portfolio/projects/project3/images/plot1.png",
+        screenshots: [
+            "/my-portfolio/projects/project3/images/plot1.png",
+        ],
         github: "https://github.com/Dhieaaldin/netflix-analysis",
     },
 ]

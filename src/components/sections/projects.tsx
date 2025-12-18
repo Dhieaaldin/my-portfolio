@@ -57,8 +57,9 @@ export function Projects() {
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.9 }}
                             transition={{ duration: 0.3 }}
+                            className="h-full"
                         >
-                            <Card className="h-full flex flex-col overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <Card className="h-full flex flex-col overflow-hidden hover:shadow-lg transition-shadow duration-300 border-primary/10">
                                 <div className="relative aspect-video w-full overflow-hidden bg-muted">
                                     <Link href={`/projects/${project.id}`}>
                                         <Image

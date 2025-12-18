@@ -41,8 +41,9 @@ export function Skills() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
+                        className="h-full"
                     >
-                        <Card className="h-full flex flex-col">
+                        <Card className="h-full flex flex-col border-primary/10 hover:border-primary/30 transition-colors shadow-sm">
                             <CardHeader>
                                 <CardTitle>{category.category}</CardTitle>
                             </CardHeader>
