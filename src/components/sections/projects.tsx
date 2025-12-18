@@ -26,7 +26,9 @@ export function Projects() {
             <div className="space-y-4 text-center">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Featured Projects</h2>
                 <p className="text-muted-foreground max-w-[600px] mx-auto">
-                    Explore my portfolio of data science, machine learning, and software development projects.
+
+                    &ldquo;Ask my AI assistant about my projects, skills, or experience.&rdquo;
+
                 </p>
             </div>
 
