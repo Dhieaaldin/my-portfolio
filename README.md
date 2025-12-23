@@ -6,7 +6,7 @@
 
 > A modern, AI-powered portfolio showcasing projects in data science, machine learning, and software development. Built with Next.js 16, TypeScript, and featuring a RAG-powered chatbot.
 
-![Portfolio Preview](https://i.imgur.com/pNCFiGK.png)
+![Portfolio Preview](https://i.imgur.com/p1TlVUm.png)
 
 ---
 
