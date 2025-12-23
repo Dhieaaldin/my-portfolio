@@ -276,7 +276,6 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 - **Vercel** for Next.js and deployment tools
 - **Tailwind Labs** for Tailwind CSS
 - **Shadcn** for the UI component inspiration
-- **Anthropic** for Claude AI assistance
 
 ---
 
