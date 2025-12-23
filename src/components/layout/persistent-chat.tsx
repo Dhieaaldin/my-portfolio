@@ -36,7 +36,7 @@ export function PersistentChat() {
     if (isTyping) {
       timer = setTimeout(() => {
         setShowColdStartNotice(true)
-      }, 5000) // show after 5s
+      }, 8000) // show after 5s
     }
 
     return () => clearTimeout(timer)
