@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils"
 type ChatMessage = {
   role: "user" | "assistant"
   content: string
-  sources?: string[]  // optional sources for assistant messages
+  sources?: string[]
 }
 
 export function PersistentChat() {
@@ -26,6 +26,21 @@ export function PersistentChat() {
   const [input, setInput] = React.useState("")
   const [isTyping, setIsTyping] = React.useState(false)
   const [error, setError] = React.useState<string | null>(null)
+
+  // ⏳ Cold start notice (Option 2)
+  const [showColdStartNotice, setShowColdStartNotice] = React.useState(false)
+
+  React.useEffect(() => {
+    let timer: NodeJS.Timeout
+
+    if (isTyping) {
+      timer = setTimeout(() => {
+        setShowColdStartNotice(true)
+      }, 8000) // show after 5s
+    }
+
+    return () => clearTimeout(timer)
+  }, [isTyping])
 
   const toggleChat = () => {
     if (isOpen && isMinimized) setIsMinimized(false)
@@ -56,13 +71,10 @@ export function PersistentChat() {
         body: JSON.stringify({ question: userMessage.content })
       })
 
-      if (!res.ok) {
-        throw new Error(`Server error: ${res.status}`)
-      }
+      if (!res.ok) throw new Error(`Server error: ${res.status}`)
 
       const data = await res.json()
 
-      // data = { answer: string, sources: string[] }
       const assistantMessage: ChatMessage = {
         role: "assistant",
         content: data.answer,
@@ -75,6 +87,7 @@ export function PersistentChat() {
       console.error(err)
     } finally {
       setIsTyping(false)
+      setShowColdStartNotice(false)
     }
   }
 
@@ -103,6 +116,14 @@ export function PersistentChat() {
               </CardHeader>
 
               <CardContent className="flex-1 overflow-y-auto space-y-3">
+                {/* ⏳ Cold start notice */}
+                {showColdStartNotice && (
+                  <div className="rounded-md bg-muted px-3 py-2 text-sm text-muted-foreground">
+                    ⏳ The AI server is waking up.  
+                    First response may take a few seconds.
+                  </div>
+                )}
+
                 {messages.map((m, i) => (
                   <div
                     key={i}
@@ -171,4 +192,4 @@ export function PersistentChat() {
       </div>
     </div>
   )
-}
+     }

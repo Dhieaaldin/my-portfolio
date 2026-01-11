@@ -6,7 +6,7 @@
 
 > A modern, AI-powered portfolio showcasing projects in data science, machine learning, and software development. Built with Next.js 16, TypeScript, and featuring a RAG-powered chatbot.
 
-![Portfolio Preview](https://via.placeholder.com/1200x630/1a1a2e/ffffff?text=Portfolio+V2.0)
+![Portfolio Preview](https://i.imgur.com/p1TlVUm.png)
 
 ---
 
@@ -276,7 +276,6 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 - **Vercel** for Next.js and deployment tools
 - **Tailwind Labs** for Tailwind CSS
 - **Shadcn** for the UI component inspiration
-- **Anthropic** for Claude AI assistance
 
 ---
 
