@@ -29,6 +29,21 @@ export const projectsData: Project[] = [
         github: "https://github.com/Dhieaaldin/my-portfolio/tree/main/projects/project7",
     },
     {
+        id: "hotelbot-rag",
+        title: "HotelBot - RAG Assistant",
+        description: "AI-powered hotel customer support chatbot using Retrieval-Augmented Generation (RAG) with MongoDB Atlas Vector Search, FastAPI backend, and sales-optimized intent routing for luxury hotel operations.",
+        tags: ["Python", "FastAPI", "RAG", "LangChain", "MongoDB Atlas", "OpenAI"],
+        category: "Machine Learning",
+        image: "/my-portfolio/projects/hotelbot/images/Capture d'écran 2026-01-11 153810.png",
+        screenshots: [
+            "/my-portfolio/projects/hotelbot/images/Capture d'écran 2026-01-11 152413.png",
+            "/my-portfolio/projects/hotelbot/images/Capture d'écran 2026-01-11 152437.png",
+            "/my-portfolio/projects/hotelbot/images/Capture d'écran 2026-01-11 153119.png",
+            "/my-portfolio/projects/hotelbot/images/Capture d'écran 2026-01-11 153145.png",
+        ],
+        github: "https://github.com/Dhieaaldin/Hotel_RAG_assistant_v1",
+    },
+    {
         id: "car-price",
         title: "Car Price Predictor",
         description: "An ML-powered web application that predicts car prices based on user input. Features include exploratory data analysis and visualization.",
@@ -146,4 +161,5 @@ export const projectsData: Project[] = [
         ],
         github: "https://github.com/Dhieaaldin/my-portfolio/tree/main/projects/project3",
     },
+
 ]
