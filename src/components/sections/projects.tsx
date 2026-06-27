@@ -72,6 +72,17 @@ export function Projects() {
                                         // Use unoptimized for legacy images if needed, but next.config.ts handles global unoptimized
                                         />
                                     </Link>
+                                    {project.academicDetails && (
+                                        <div className="absolute top-3 right-3 z-10">
+                                            <span className="inline-flex items-center gap-1.5 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider rounded-full border bg-gradient-to-r from-slate-300 via-slate-100 to-slate-400 text-slate-800 border-slate-200/80 shadow-md">
+                                                <span className="relative flex h-1.5 w-1.5">
+                                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-400 opacity-75"></span>
+                                                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-slate-500"></span>
+                                                </span>
+                                                End of Study Project
+                                            </span>
+                                        </div>
+                                    )}
                                 </div>
                                 <CardHeader>
                                     <Link href={`/projects/${project.id}`}>

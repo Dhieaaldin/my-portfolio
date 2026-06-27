@@ -10,9 +10,68 @@ export interface Project {
     screenshots: string[]
     github: string
     link?: string
+    pdfReport?: string
+    academicDetails?: {
+        institution: string
+        company: string
+        supervisorAcademic: string
+        supervisorProfessional: string
+        year: string
+    }
+    featuresList?: {
+        title: string
+        description: string
+    }[]
 }
 
 export const projectsData: Project[] = [
+    {
+        id: "pfe-ai-invoicing",
+        title: "AI-Powered Invoicing Platform",
+        description: "A comprehensive web-based invoicing and financial management platform featuring an intelligent AI assistant. Built with NestJS, Next.js, and MySQL, it enables centralized management of quotes, invoices, payments, customers, and products under JWT & RBAC security. The AI assistant offers automated invoice analysis, scikit-learn payment delay predictions, anomaly detection, automated summaries, and conversational chatbot interactions.",
+        tags: ["Next.js", "NestJS", "MySQL", "TypeScript", "AI Assistant", "LLM & RAG", "Docker", "Machine Learning"],
+        category: "Software Development",
+        image: "/my-portfolio/projects/pfe/dashboard.png",
+        screenshots: [
+            "/my-portfolio/projects/pfe/dashboard.png",
+            "/my-portfolio/projects/pfe/ai_interface.png",
+            "/my-portfolio/projects/pfe/catalog.png",
+            "/my-portfolio/projects/pfe/invoices.png",
+            "/my-portfolio/projects/pfe/payment.png",
+            "/my-portfolio/projects/pfe/user_mgmt.png",
+        ],
+        github: "https://github.com/Dhieaaldin",
+        pdfReport: "/my-portfolio/projects/pfe/Dhia_eddine_louati.pdf",
+        academicDetails: {
+            institution: "Higher Institute of Computer Science and Communication Technologies of Sousse (ISITCom)",
+            company: "Zedney Creative",
+            supervisorAcademic: "Mr. Wissem Fathallah",
+            supervisorProfessional: "Mr. Houssem Eddine Chibouni",
+            year: "2025/2026"
+        },
+        featuresList: [
+            {
+                title: "Core Billing Cycle",
+                description: "Centralized management of quotes, invoices, payment tracking, and automated balance calculations."
+            },
+            {
+                title: "AI Invoice Assistant",
+                description: "Intelligent processing of invoices, automated summary generation, and a natural language chatbot."
+            },
+            {
+                title: "Delay & Anomaly Detection",
+                description: "Machine learning models predicting client payment delays and flagging potential transaction anomalies."
+            },
+            {
+                title: "Enterprise Security",
+                description: "Robust JWT authentication system coupled with Role-Based Access Control (RBAC) rules."
+            },
+            {
+                title: "DevOps & Deployment Ready",
+                description: "Containerized with Docker, continuous integration with GitHub Actions, deployed on DigitalOcean via Nginx HTTPS."
+            }
+        ]
+    },
     {
         id: "sonicshield",
         title: "SonicShield",
