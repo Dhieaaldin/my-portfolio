@@ -59,65 +59,134 @@ export function Projects() {
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.9 }}
                             transition={{ duration: 0.3 }}
-                            className="h-full"
+                            className={cn(
+                                "h-full",
+                                project.id === "pfe-ai-invoicing" && "sm:col-span-2 lg:col-span-3 w-full"
+                            )}
                         >
-                            <Card className="h-full flex flex-col overflow-hidden hover:shadow-lg transition-shadow duration-300 border-primary/10">
-                                <div className="relative aspect-video w-full overflow-hidden bg-muted">
-                                    <Link href={`/projects/${project.id}`}>
-                                        <Image
-                                            src={project.image}
-                                            alt={project.title}
-                                            fill
-                                            className="object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
-                                        // Use unoptimized for legacy images if needed, but next.config.ts handles global unoptimized
-                                        />
-                                    </Link>
-                                    {project.academicDetails && (
-                                        <div className="absolute top-3 right-3 z-10">
-                                            <span className="inline-flex items-center gap-1.5 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider rounded-full border bg-gradient-to-r from-slate-300 via-slate-100 to-slate-400 text-slate-800 border-slate-200/80 shadow-md">
-                                                <span className="relative flex h-1.5 w-1.5">
-                                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-400 opacity-75"></span>
-                                                    <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-slate-500"></span>
-                                                </span>
-                                                End of Study Project
-                                            </span>
-                                        </div>
-                                    )}
-                                </div>
-                                <CardHeader>
-                                    <Link href={`/projects/${project.id}`}>
-                                        <CardTitle className="line-clamp-1 hover:text-primary transition-colors cursor-pointer">{project.title}</CardTitle>
-                                    </Link>
-                                    <CardDescription className="line-clamp-2 min-h-[2.5rem]">{project.description}</CardDescription>
-                                </CardHeader>
-                                <CardContent className="flex-1 flex flex-col justify-end">
-                                    <div className="flex flex-wrap gap-2 mt-auto">
-                                        {project.tags.slice(0, 3).map((tag) => (
-                                            <Badge key={tag} variant="secondary" className="text-xs">
-                                                {tag}
-                                            </Badge>
-                                        ))}
-                                        {project.tags.length > 3 && (
-                                            <Badge variant="secondary" className="text-xs">
-                                                +{project.tags.length - 3}
-                                            </Badge>
-                                        )}
-                                    </div>
-                                </CardContent>
-                                <CardFooter className="flex gap-2 pt-0 mt-4">
-                                    <Button asChild variant="outline" size="sm" className="w-full">
-                                        <Link href={project.github} target="_blank">
-                                            <Github className="mr-2 h-4 w-4" /> Code
-                                        </Link>
-                                    </Button>
-                                    {project.link && (
-                                        <Button asChild size="sm" className="w-full">
-                                            <Link href={project.link} target="_blank">
-                                                <ExternalLink className="mr-2 h-4 w-4" /> Demo
+                            <Card className={cn(
+                                "h-full flex flex-col overflow-hidden hover:shadow-lg transition-shadow duration-300 border-primary/10",
+                                project.id === "pfe-ai-invoicing" && "md:flex-row md:min-h-[300px]"
+                            )}>
+                                {project.id === "pfe-ai-invoicing" ? (
+                                    <>
+                                        <div className="relative aspect-video w-full overflow-hidden bg-muted shrink-0 md:w-[45%] md:aspect-auto md:min-h-[300px]">
+                                            <Link href={`/projects/${project.id}`} className="block w-full h-full relative">
+                                                <Image
+                                                    src={project.image}
+                                                    alt={project.title}
+                                                    fill
+                                                    className="object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                                                />
                                             </Link>
-                                        </Button>
-                                    )}
-                                </CardFooter>
+                                        </div>
+                                        <div className="flex-1 flex flex-col justify-between p-6">
+                                            <div className="space-y-4">
+                                                {project.academicDetails && (
+                                                    <div>
+                                                        <span className="inline-flex items-center gap-1.5 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider rounded-full border bg-gradient-to-r from-slate-300 via-slate-100 to-slate-400 text-slate-800 border-slate-200/80 shadow-md">
+                                                            <span className="relative flex h-1.5 w-1.5">
+                                                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-400 opacity-75"></span>
+                                                                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-slate-500"></span>
+                                                            </span>
+                                                            End of Study Project
+                                                        </span>
+                                                    </div>
+                                                )}
+                                                <Link href={`/projects/${project.id}`}>
+                                                    <CardTitle className="text-2xl hover:text-primary transition-colors cursor-pointer">{project.title}</CardTitle>
+                                                </Link>
+                                                <CardDescription className="text-sm line-clamp-3 md:line-clamp-4 leading-relaxed">
+                                                    {project.description}
+                                                </CardDescription>
+                                                <div className="flex flex-wrap gap-2 pt-2">
+                                                    {project.tags.slice(0, 6).map((tag) => (
+                                                        <Badge key={tag} variant="secondary" className="text-xs">
+                                                            {tag}
+                                                        </Badge>
+                                                    ))}
+                                                    {project.tags.length > 6 && (
+                                                        <Badge variant="secondary" className="text-xs">
+                                                            +{project.tags.length - 6}
+                                                        </Badge>
+                                                    )}
+                                                </div>
+                                            </div>
+                                            <div className="flex gap-3 pt-6 mt-auto max-w-xs">
+                                                <Button asChild variant="outline" size="sm" className="w-full">
+                                                    <Link href={project.github} target="_blank">
+                                                        <Github className="mr-2 h-4 w-4" /> Code
+                                                    </Link>
+                                                </Button>
+                                                {project.link && (
+                                                    <Button asChild size="sm" className="w-full">
+                                                        <Link href={project.link} target="_blank">
+                                                            <ExternalLink className="mr-2 h-4 w-4" /> Demo
+                                                        </Link>
+                                                    </Button>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </>
+                                ) : (
+                                    <>
+                                        <div className="relative aspect-video w-full overflow-hidden bg-muted">
+                                            <Link href={`/projects/${project.id}`}>
+                                                <Image
+                                                    src={project.image}
+                                                    alt={project.title}
+                                                    fill
+                                                    className="object-cover transition-transform duration-300 hover:scale-105 cursor-pointer"
+                                                />
+                                            </Link>
+                                        </div>
+                                        <CardHeader>
+                                            {project.academicDetails && (
+                                                <div className="mb-2">
+                                                    <span className="inline-flex items-center gap-1.5 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider rounded-full border bg-gradient-to-r from-slate-300 via-slate-100 to-slate-400 text-slate-800 border-slate-200/80 shadow-md">
+                                                        <span className="relative flex h-1.5 w-1.5">
+                                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-400 opacity-75"></span>
+                                                            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-slate-500"></span>
+                                                        </span>
+                                                        End of Study Project
+                                                    </span>
+                                                </div>
+                                            )}
+                                            <Link href={`/projects/${project.id}`}>
+                                                <CardTitle className="line-clamp-1 hover:text-primary transition-colors cursor-pointer">{project.title}</CardTitle>
+                                            </Link>
+                                            <CardDescription className="line-clamp-2 min-h-[2.5rem]">{project.description}</CardDescription>
+                                        </CardHeader>
+                                        <CardContent className="flex-1 flex flex-col justify-end">
+                                            <div className="flex flex-wrap gap-2 mt-auto">
+                                                {project.tags.slice(0, 3).map((tag) => (
+                                                    <Badge key={tag} variant="secondary" className="text-xs">
+                                                        {tag}
+                                                    </Badge>
+                                                ))}
+                                                {project.tags.length > 3 && (
+                                                    <Badge variant="secondary" className="text-xs">
+                                                        +{project.tags.length - 3}
+                                                    </Badge>
+                                                )}
+                                            </div>
+                                        </CardContent>
+                                        <CardFooter className="flex gap-2 pt-0 mt-4">
+                                            <Button asChild variant="outline" size="sm" className="w-full">
+                                                <Link href={project.github} target="_blank">
+                                                    <Github className="mr-2 h-4 w-4" /> Code
+                                                </Link>
+                                            </Button>
+                                            {project.link && (
+                                                <Button asChild size="sm" className="w-full">
+                                                    <Link href={project.link} target="_blank">
+                                                        <ExternalLink className="mr-2 h-4 w-4" /> Demo
+                                                    </Link>
+                                                </Button>
+                                            )}
+                                        </CardFooter>
+                                    </>
+                                )}
                             </Card>
                         </motion.div>
                     ))}
